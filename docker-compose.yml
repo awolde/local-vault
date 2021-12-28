@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  vault-api:
+    image: local-vault
+    environment:
+      - VAULT_SKIP_VERIFY=true
+      - VAULT_CONFIG=/etc/vault/vault.hcl
+    volumes:
+      - ./vault:/vault-db
+      - ./etc:/etc/vault
+    networks:
+      - backend
+    ports:
+    - "8200:8200"
+    networks:
+      - backend
+
+networks:
+  backend:
+
+volumes:
+  vault:
+  config:
