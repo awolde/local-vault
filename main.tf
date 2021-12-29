@@ -22,7 +22,7 @@ resource "vault_jwt_auth_backend_role" "gmail" {
   bound_audiences = [var.client_id]
   user_claim      = "sub"
   bound_claims = {
-    sub = var.gmail_ids
+    sub = var.gmail_ids # allow only specific users to login, otherwise anyone with gmail can login
   }
   role_type = "oidc"
   allowed_redirect_uris = ["https://localhost:8250/oidc/callback", "https://localhost:8200/ui/vault/auth/goidc/oidc/callback", "https://pub.${var.domain}:8250/oidc/callback", "https://pub.${var.domain}:8200/ui/vault/auth/goidc/oidc/callback"]
