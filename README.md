@@ -22,7 +22,7 @@ Basic Auth in nginx is configured not to ask for login for internal `192.168.0.0
 ## Configure Vault
 A terraform file is provided to configure your vault instance to auth with Gmail. Populate the appropriate values in a tfvars file for the following:
 ```
-domain -> your domain
+domain -> your domain, oidc wont work with IP addresses. You can use localhost for testing, thats about it.
 gmail_ids -> you can get that from the container logs, google assigns your account some long a$$ number
 client_id -> GCP console on Oauth credentials
 client_secret -> Keep this secret from Oauth credentials from above
@@ -38,3 +38,8 @@ Adding password for user user
 $ cat file
 user:$apr1$7A67oITs$LRD/fUbARKqMd0B5GfqJg.
 ```
+
+## Port forward with SSH
+Q: Forward vault container running on `192.168.1.5:8200` to your localhost port 8200 for oidc testing?
+
+A: `ssh -L 8200:localhost:8200 awolde@192.168.1.5`
