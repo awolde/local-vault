@@ -5,6 +5,10 @@ A local custom made docker container to run your vault instance.
 There is only one person in your household that knows all the passwords, why not share them within your LAN hosted vault?
 Also I dont trust lastpass, etc ;)
 
+## Login
+Use Oauth with your gmail account.
+![vault login](vault.png)
+
 ## Pre-req
 - SSL certs - self signed is fine, you're gonna use it in your LAN eitherway.
 - .htpasswd file generated with `htpasswd` command to add allowed users to access Vault UI.
