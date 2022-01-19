@@ -7,7 +7,7 @@ Also I dont trust lastpass, etc ;)
 
 ## Login
 Use Oauth with your gmail account.
-![vault login](vault.png)
+![vault login](vault.png | width=100)
 
 ## Pre-req
 - SSL certs - self signed is fine, you're gonna use it in your LAN eitherway.
