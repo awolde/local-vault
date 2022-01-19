@@ -8,8 +8,8 @@ resource "vault_jwt_auth_backend" "gcp_oidc" {
   default_role       = "gmail"
   tune {
     listing_visibility = "unauth"
-    default_lease_ttl  = "768h"
-    max_lease_ttl      = "768h"
+    default_lease_ttl  = "8h"
+    max_lease_ttl      = "8h"
     token_type         = "default-service"
   }
 }
