@@ -1,6 +1,10 @@
 # local-vault
 A local custom made docker container to run your vault instance.
 
+## Rationale
+There is only one person in your household that knows all the passwords, why not share them within your LAN hosted vault?
+Also I dont trust lastpass, etc ;)
+
 ## Pre-req
 - SSL certs - self signed is fine, you're gonna use it in your LAN eitherway.
 - .htpasswd file generated with `htpasswd` command to add allowed users to access Vault UI.
