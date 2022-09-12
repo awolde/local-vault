@@ -14,7 +14,8 @@ services:
     ports:
     - "8200:8200"
     networks:
-      - backend
+    - backend
+    restart: always
 
 networks:
   backend:
